@@ -1,4 +1,4 @@
-FROM ubuntu:17.04
+FROM vitals/node-ionic
 
 LABEL de.mindrunner.android-docker.flavour="ubuntu-lazydl"
 
@@ -12,15 +12,10 @@ ENV DEBIAN_FRONTEND noninteractive
 # Install required tools
 # Dependencies to execute Android builds
 
-RUN dpkg --add-architecture i386 && apt-get update -yqq && apt-get install -y \
+RUN dpkg apt-get update -yqq && apt-get install -y \
   curl \
   expect \
   git \
-  libc6:i386 \
-  libgcc1:i386 \
-  libncurses5:i386 \
-  libstdc++6:i386 \
-  zlib1g:i386 \
   openjdk-8-jdk \
   wget \
   unzip \
