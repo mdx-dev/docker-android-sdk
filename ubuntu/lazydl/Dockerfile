@@ -19,7 +19,6 @@ RUN dpkg apt-get update -yqq && apt-get install -y \
   openjdk-8-jdk \
   wget \
   unzip \
-  vim \
   && apt-get clean
 
 RUN groupadd android && useradd -d /opt/android-sdk-linux -g android android
